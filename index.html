@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>周氏餐饮</title>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+              <script>
+                  function setcanvas() {
+                      var canvas = document.getElementById("mycanvas");
+                      var ctx = canvas.getContext("2d");
+                      ctx.beginPath();
+                      ctx.strokeStyle ="white";
+                      ctx.lineCap = 'round';
+                      ctx.lineWidth = 6;
+                      ctx.arc(215,250,160,0, Math.PI,false);
+                      ctx.stroke();
+
+                  }
+              </script>
+</head>
+<body onload="setInterval('Changebackground();',5000),setcanvas(),change_musicname();" background="css/background.jpg" id="bodys">
+
+            <header>
+                <button id="button" onmouseover="music_sheet();" onmouseout="music_none();" >歌单列表</button>
+                <div id="sheet" onmouseover="music_sheet();" onmouseout="music_none();" >
+                        <div onmouseover="music_changecolor(this.id);" id="music0" onmouseout="music_color(this.id);" onclick="choice_music(this.id);">牵绊</div>
+                        <div onmouseover="music_changecolor(this.id);" id="music1" onmouseout="music_color(this.id);" onclick="choice_music(this.id);">爱与恨</div>
+                         <div onmouseover="music_changecolor(this.id);" id="music2" onmouseout="music_color(this.id);" onclick="choice_music(this.id);">热血无赖</div>
+                        <div onmouseover="music_changecolor(this.id);" id="music3" onmouseout="music_color(this.id);" onclick="choice_music(this.id);">少年情</div>
+                        <div onmouseover="music_changecolor(this.id);" id="music4" onmouseout="music_color(this.id);" onclick="choice_music(this.id);">Pendulum Beat！</div>
+                </div>
+            </header>
+
+
+
+            <div id="beijing">
+            <figure style="text-align: center;margin-top: 5%;z-index: 5;">
+                <img src="css/first.png" height="35px" width="35px" alt="第一首" id="first" onclick="music_first();">
+                <img src="css/prev.png" height="35px" width="35px" alt="上一首" id="prev" onclick="music_prev();">
+                <input type="image" src="css/pause.png" height="35px" width="35px" id="stops" onclick="music_stop();">
+                <img src="css/next.png" height="35px" width="35px" alt="下一首" id="next" onclick="music_next();">
+                <img src="css/last.png" height="35px" width="35px" alt="最后一首" id="last" onclick="music_last();">
+            </figure>
+
+
+             <section>
+                    <h1 id="music_names">歌曲名:</h1>
+                    <h1 id="music_name"></h1>
+                    <br/>
+
+                 <div class="styled-select">
+                     <select onchange="change_play(this.value)">
+                         <option value="1"  name="1">单曲循环</option>
+                         <option value="2"  name="2"  selected="selected">列表循环</option>
+                         <option value="3"  name="3">随机播放</option>
+                     </select>
+                 </div>
+
+             </section>
+
+            <canvas  id="mycanvas" width="420px" height="420px"></canvas>
+
+            <audio id="myaudio" autoplay="autoplay"></audio>
+
+            <div class="voice">
+                <input id="volume" type="range" min="0" max="1" value="0.7" step="0.1" onmouseup="finishChange();">
+            </div>
+
+            <div>
+                  <p id="times" style="color: cyan">00:00:00/00:00:00</p>
+            </div>
+
+            </div>
+
+            <aside>
+              <div id="lyric"></div>
+            </aside>
+
+</body>
+          <script src="js/index.js"></script>
+</html>

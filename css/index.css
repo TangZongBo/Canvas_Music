@@ -1,0 +1,187 @@
+*{
+     padding: 0;
+     margin: 0;
+}
+
+body{
+       width: 100%;
+        height: 100%;
+    background-repeat:no-repeat;
+     z-index: -10;
+          height: 500px;
+}
+
+#mycanvas{
+      width: 420px;
+      height: 420px;
+      position: absolute;
+    z-index: -1;
+     margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#players{
+    background: rgba(0, 0, 0, 0.5);
+    width: 430px;
+    height: 450px;
+    position: absolute;
+    top: 20%;
+    left: 36%;
+}
+
+#info{
+    width: 380px;
+    height: 299px;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    z-index: 1;
+}
+
+#tools{
+    position: absolute;
+    top:35%;
+    left: 36%;
+    width: 28.3%;
+    height: 60px;
+    background-color: green;
+    z-index: -1;
+}
+
+#prev{
+    margin-top: 2%;
+    margin-left: 20px;
+}
+
+#stops{
+    margin-left: 95px;
+}
+
+#next{
+    margin-left:101px;
+}
+
+#last{
+    margin-left:20px;
+}
+
+.voice{
+      position: absolute;
+     top:55%;
+      left: 45%;
+}
+
+#times{
+    position: absolute;
+    top:59%;
+    left: 46%;
+}
+
+#button{
+    color: cornsilk;
+    line-height: 35px;
+    text-align: center;
+    position: relative;
+    margin-left: 55%;
+    left: 15%;
+    top:25%;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #3d3d3d;
+    filter:alpha(opacity=20); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.2; /*Firefox私有，透明度50%*/
+    opacity:0.2;/*其他，透明度50%*/
+}
+
+#music_name{
+    margin-left: 5%;
+    color: chartreuse;
+    display: inline;
+}
+
+section{
+   margin-top: 15%;
+    margin-left: 35%;
+}
+
+section h1{
+    display: inline;
+}
+
+select{
+    background: transparent;
+    width: 320px;
+    padding: 3px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    height: 25px;
+    -webkit-appearance: none; /*for chrome*/
+}
+
+.styled-select{
+    width: 100px;
+    height: 25px;
+    overflow: hidden;
+    background: url(1.jpg) no-repeat right #ddd;
+    margin-top: 8%;
+    margin-left: 8%;
+}
+
+#beijing{
+    border: 1px solid rgba(0,0,0,.2);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    width: 500px;
+     height: 500px;
+    margin-top: 5%;
+    margin-left: 34%;
+}
+
+header{
+     float: left;
+}
+#sheet{
+    border: 1px solid rgba(0,0,0,.2);
+    background: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);
+     height: 300px;
+     width: 300px;
+    margin-left: 4%;
+    position: absolute;
+     display: none;
+    border-radius:10px
+}
+
+header div div{
+     font-size: 20px;
+      color: chartreuse;
+      border: 4px solid white;
+      border-radius: 10px;
+      margin-top: 5%;
+      padding-left: 25%;
+}
+
+aside{
+    text-align: center;
+    margin-top: 3%;
+    font-size: 20px;
+    color: lime;
+}
+
+aside>div{
+     letter-spacing: 5px;
+}
